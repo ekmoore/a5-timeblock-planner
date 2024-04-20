@@ -4,7 +4,9 @@ This is a fork of [drewish's planner](https://github.com/drewish/planner), takin
 
 My changes:
 - A5 sizing
+- Scaled down font sizes
 - Changed default hours
+- Tweaked 1-on-1 template to work better in A5
 
 Quick
 - `planner.rb` generates planner pages based on [Cal Newport's Time-Block Planner](https://www.timeblockplanner.com) layout.
