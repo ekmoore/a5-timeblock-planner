@@ -261,8 +261,8 @@ def daily_calendar_page pdf, date
   # right_header = date.strftime("Day %j")
   right_header = date.strftime("%A")
   left_subhed = date.strftime("Quarter #{quarter(date)} Week %W Day %j")
-  # right_subhed = business_days_left_in_year(date)
-  right_subhed = business_days_left_in_sprint(date)
+  right_subhed = business_days_left_in_year(date)
+  #right_subhed = business_days_left_in_sprint(date)
   pdf.grid([0, first_column],[1, 1]).bounding_box do
     pdf.text left_header, heading_format(align: :left)
   end
