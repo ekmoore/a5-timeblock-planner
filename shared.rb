@@ -52,11 +52,11 @@ def hole_punches pdf
 end
 
 def heading_format(overrides = {})
-  { size: 20, color: DARK_COLOR }.merge(overrides)
+  { size: 12, color: DARK_COLOR }.merge(overrides)
 end
 
 def subheading_format(overrides = {})
-  { size: 12, color: MEDIUM_COLOR }.merge(overrides)
+  { size: 10, color: MEDIUM_COLOR }.merge(overrides)
 end
 
 def draw_checkbox pdf, checkbox_size, checkbox_padding, label = nil
