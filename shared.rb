@@ -6,7 +6,7 @@ require 'date'
 require_relative './config'
 
 def init_pdf
-  pdf = Prawn::Document.new(margin: RIGHT_PAGE_MARGINS, print_scaling: :none)
+  pdf = Prawn::Document.new(margin: RIGHT_PAGE_MARGINS, print_scaling: :none, page_size: PAGE_SIZE)
   pdf.font_families.update(FONTS)
   pdf.font(FONTS.keys.first)
   pdf.stroke_color MEDIUM_COLOR
@@ -33,7 +33,7 @@ def begin_new_page pdf, side
   margin = side == :left ? LEFT_PAGE_MARGINS : RIGHT_PAGE_MARGINS
   pdf.start_new_page size: PAGE_SIZE, layout: :portrait, margin: margin
   if side == :right
-    #hole_punches pdf
+   #hole_punches pdf
   end
 end
 
