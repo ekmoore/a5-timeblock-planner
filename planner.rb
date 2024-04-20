@@ -97,7 +97,7 @@ def quarter_ahead pdf, first_day, last_day
   subheading_right = last_day.strftime('%Y')
 
   # We let the caller start our page for us but we'll do both sides
-  hole_punches pdf
+  #hole_punches pdf
   notes_page pdf, heading_left, subheading_left, heading_right, subheading_right
   begin_new_page pdf, :left
   notes_page pdf, heading_left, subheading_left, heading_right, subheading_right
@@ -112,7 +112,7 @@ def week_ahead_page pdf, first_day, last_day
 
   # We don't start our own page since we don't know if this is the first week or one
   # of several weeks in a file.
-  hole_punches pdf
+  #hole_punches pdf
   notes_page pdf, heading_left, subheading_left, heading_right, subheading_right
 end
 

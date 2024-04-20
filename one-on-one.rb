@@ -89,7 +89,7 @@ next_sunday = sunday.next_day(7)
 puts "Generating one-on-one forms for #{monday.strftime(DATE_FULL_START)}#{next_sunday.strftime(DATE_FULL_END)} into #{FILE_NAME}"
 
 pdf = init_pdf
-hole_punches pdf
+#hole_punches pdf
 
 OOOS_BY_WDAY
   .each_with_index

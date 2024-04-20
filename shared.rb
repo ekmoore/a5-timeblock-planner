@@ -33,7 +33,7 @@ def begin_new_page pdf, side
   margin = side == :left ? LEFT_PAGE_MARGINS : RIGHT_PAGE_MARGINS
   pdf.start_new_page size: PAGE_SIZE, layout: :portrait, margin: margin
   if side == :right
-    hole_punches pdf
+    #hole_punches pdf
   end
 end
 
