@@ -36,7 +36,7 @@ OOOS_BY_WDAY = [nil, nil, nil, nil, nil, nil, nil]
 
 # Repeating tasks by day of week, 0 is Sunday. Nested index is the row.
 TASKS_BY_WDAY = [
-  { 0 => 'Weekly review' },
+  {},
   {},
   {},
   {},
