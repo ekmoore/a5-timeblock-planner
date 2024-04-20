@@ -35,10 +35,10 @@ def one_on_one_page pdf, name, date
   # end
 
   sections(pdf, 2, body_row_count, {
-    2 => "Personal/Notes: <color rgb='#{MEDIUM_COLOR}'>(Spouse, children, pets, hobbies, friends, history, etc.)</color>",
+    2 => "Personal/Notes: <color rgb='#{MEDIUM_COLOR}'>(Details, etc.)</color>",
     5 => "Their Update: <color rgb='#{MEDIUM_COLOR}'>(Notes you take from their “10 minutes”)</color>",
-    15 => "My Update: <color rgb='#{MEDIUM_COLOR}'>(Notes you make to prepare for your “10 minutes”)</color>",
-    24 => "Future/Follow Up: <color rgb='#{MEDIUM_COLOR}'>(Where are they headed? Items to review at the next 1:1)</color>",
+    15 => "My Update: <color rgb='#{MEDIUM_COLOR}'>(Prep notes for your “10 minutes”)</color>",
+    24 => "Future/Follow Up: <color rgb='#{MEDIUM_COLOR}'>(Items to review at the next 1:1)</color>",
   })
 
   # Back of the page
@@ -51,33 +51,29 @@ def one_on_one_page pdf, name, date
     pdf.text date.strftime(DATE_LONG), subheading_format(align: :left)
   end
 
-  question_start = 25
-  question_end = question_start + 4
+  question_start = 24
+  question_end = question_start + 8
 
   sections(pdf, 2, question_start - 1, {
     2 => "Additional Notes:",
-    20 => "Feedback:",
   })
 
   pdf.grid([question_start, 0],[question_start, 3]).bounding_box do
     pdf.text "Questions to Ask:", valign: :bottom, color: DARK_COLOR
   end
-  pdf.grid([question_start + 1, 0],[question_end, 1]).bounding_box do
+  pdf.grid([question_start + 1, 0],[question_end, 13]).bounding_box do
     pdf.text "• Tell me about what you’ve been working on.\n" +
       "• Tell me about your week – what’s it been like?\n" +
-      "• Tell me about your family/weekend/activities?\n" +
-      "• Where are you on ( ) project?\n" +
+      "• Where are you on () project?\n" +
       "• Are you on track to meet the deadline?\n" +
       "• What questions do you have about the project?\n" +
-      "• What did ( ) say about this?", size: 10, color: MEDIUM_COLOR
-  end
-  pdf.grid([question_start + 1, 2],[question_end, 3]).bounding_box do
-    pdf.text "• Is there anything I need to do, and if so by when?\n" +
+      "• What did () say about this?\n" +
+      "• Is there anything I need to do, and if so by when?\n" +
       "• How are you going to approach this?\n" +
       "• What do you think you should do?\n" +
-      "• So, you’re going to do “( )” by “( )”, right?\n" +
+      "• So, you’re going to do () by (), right?\n" +
       "• What can you/we do differently next time?\n" +
-      "• Any ideas/suggestions/improvements?", size: 10, color: MEDIUM_COLOR
+      "• Any ideas, suggestions, improvements?", size: 9, color: MEDIUM_COLOR
   end
 end
 
