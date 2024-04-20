@@ -4,7 +4,9 @@ This is a fork of [drewish's planner](https://github.com/drewish/planner), takin
 
 My changes:
 - A5 sizing
+- Scaled down font sizes
 - Changed default hours
+- Tweaked 1-on-1 template to work better in A5
 
 Quick
 - `planner.rb` generates planner pages based on [Cal Newport's Time-Block Planner](https://www.timeblockplanner.com) layout.
@@ -53,3 +55,5 @@ Similarly, you can choose a week:
 ## Limitations
 
 Probably only works on a Mac since it hardcodes the font path.
+
+I am insufficiently skilled to include page imposition as part of this fork. Instead, I use [BookletCreator](https://www.bookletcreator.com/) to transform this project's output into a booklet, print on A4 pages, cut them in half, and finally hole punch. 
