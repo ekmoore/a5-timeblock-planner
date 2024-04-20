@@ -55,3 +55,5 @@ Similarly, you can choose a week:
 ## Limitations
 
 Probably only works on a Mac since it hardcodes the font path.
+
+I am insufficiently skilled to include page imposition as part of this fork. Instead, I use [BookletCreator](https://www.bookletcreator.com/) to transform this project's output into a booklet, print on A4 pages, cut them in half, and finally hole punch. 
