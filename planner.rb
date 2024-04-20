@@ -194,28 +194,28 @@ def daily_tasks_page pdf, date
     pdf.stroke_bounds
     pdf.undash
 
-    pdf.translate 10, -10 do
-      pdf.text "Daily Metrics", color: MEDIUM_COLOR
+    pdf.translate 8, -8 do
+      pdf.text "Daily Metrics", color: MEDIUM_COLOR, size: 10
     end
 
     pdf.stroke do
-      pdf.rectangle [pdf.bounds.bottom_right[0] - 20, pdf.bounds.bottom_right[1] + 20], 10, 10
+      pdf.rectangle [pdf.bounds.bottom_right[0] - 18, pdf.bounds.bottom_right[1] + 18], 12, 12
     end
 
     pdf.translate -27, 7 do
-      pdf.text "Shutdown Complete", color: MEDIUM_COLOR, align: :right, valign: :bottom
+      pdf.text "Shutdown Complete", color: MEDIUM_COLOR, align: :right, valign: :bottom, size: 10
     end
   end
 
   # Tasks / Notes
   pdf.grid([5, 0], [5, 1]).bounding_box do
     pdf.translate 6, 0 do
-      pdf.text "Tasks:", color: DARK_COLOR, valign: :center
+      pdf.text "Tasks:", color: DARK_COLOR, valign: :center, size: 10
     end
   end
   pdf.grid([5, 2], [5, 3]).bounding_box do
     pdf.translate 6, 0 do
-      pdf.text "Notes:", color: DARK_COLOR, valign: :center
+      pdf.text "Notes:", color: DARK_COLOR, valign: :center, size: 10
     end
   end
 
